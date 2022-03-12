@@ -15,11 +15,11 @@ def apiVersion = rootProject.ext.riruApiVersion
 def minApiVersion = rootProject.ext.riruMinApiVersion
 def moduleProps = [
         id         : "riru-core",
-        name       : "Riru",
+        name       : "Riru for Twoyi",
         version    : "$versionName",
         versionCode: "$versionCode",
-        author     : "Rikka, yujincheng08",
-        description: 'Inject into zygote and run codes from "Riru" modules in apps or the system server. Support modules which use Riru API v24+.',
+        author     : "Rikka, LoveSy, canyie",
+        description: 'Inject into zygote and run codes from "Riru" modules in apps or the system server. Modified by Canyie to support Twoyi. Source code: https://github.com/canyie/Riru/tree/twoyi',
         riruApi    : "$apiVersion",
         riruMinApi : "$minApiVersion"
 ]

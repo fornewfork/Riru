@@ -364,6 +364,7 @@ public class DaemonSocketServerThread extends Thread {
             var pid = credentials.getPid();
             // Changed: getPidContext doesn't work and always return null on Twoyi
             //var context = SELinux.getPidContext(pid);
+            var context = "(ignored in Twoyi)";
             if (uid != 0 /* || !Objects.equals(context, "u:r:zygote:s0") */) {
                 socket.close();
                 Log.w(TAG, "Unauthorized peer (" +

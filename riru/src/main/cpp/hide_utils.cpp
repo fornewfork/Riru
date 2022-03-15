@@ -247,6 +247,7 @@ namespace hide {
     }
 
     void PrepareMapsHideLibrary() {
+        /*
         auto hide_lib_path = magisk::GetPathForSelfLib("libriruhide.so");
 
         // load riruhide.so and run the hide
@@ -261,6 +262,8 @@ namespace hide {
             LOGE("dlsym failed: %s", dlerror());
             dlclose(riru_hide_handle);
             return;
-        }
+        }*/
+        riru_hide_handle = nullptr;
+        riru_hide_func = nullptr;
     }
 }  // namespace Hide

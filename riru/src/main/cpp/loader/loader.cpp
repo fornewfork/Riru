@@ -39,11 +39,10 @@ __used __attribute__((destructor)) void Destructor() {
 #endif
 
 __used __attribute__((constructor)) void Constructor() {
-     
-    std::string_view cmdline = getprogname();
+
     /*if (getuid() != 0) {
         return;
-    }
+    }*/
 
     std::string_view cmdline = getprogname();
 
@@ -54,7 +53,7 @@ __used __attribute__((constructor)) void Constructor() {
         cmdline != "usap64") {
         LOGW("not zygote (cmdline=%s)", cmdline.data());
         return;
-    }*/
+    }
 
     LOGI("Riru %s (%d) in %s", riru::versionName, riru::versionCode, cmdline.data());
     LOGI("Android %s (api %d, preview_api %d)", android_prop::GetRelease(),
